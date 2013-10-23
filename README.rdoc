@@ -1,0 +1,29 @@
+{<img src="https://codeclimate.com/github/CV-Gate/search_for_text_into_pdfs.png" />}[https://codeclimate.com/github/CV-Gate/search_for_text_into_pdfs]
+
+== Search for text into PDF documents. App example.
+
+This application is a simple example about how a text search can be done into pdf documents. It works with Sphinx and the pdf-reader gem.
+
+== Getting Started
+
+1. Install Sphinx
+
+2. Into the app configure the database connection (Sphinx only will work with MySQL or PostgreSQL)
+
+3. Execute rails s and upload some PDFs
+
+4. run rake ts:index and rake ts:start
+
+5. run whenever --update-crontab pdf_index to start the cron job that reindex the records
+
+5. You can also configure the cron job in Rails, now it's working each minute for testing purposes
+
+== Limitations
+
+The app stores texts into DB. The limit for MySQL is 4294967295 characters, so biggest PDFs will trim while storing. It's also possible that the DB server will throw a time-out.
+
+== Todo
+
+- Validate texts on size (perhaps too expensive)
+- Write some tests
+- Some refactor
