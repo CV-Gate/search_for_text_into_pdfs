@@ -14,12 +14,12 @@ This application is a simple example about how a text search can be done into pd
 
 4. run 
     rake ts:index 
-and
+    and
     rake ts:start
 
 5. run
     whenever --update-crontab pdf_index
-to start the cron job that reindex the records
+    to start the cron job that reindex the records
 
 6. You can also configure the cron job in Rails, now it's working each minute for testing purposes
 
